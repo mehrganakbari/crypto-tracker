@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>crypto online - wellcome</title>
-  </head>
-  <body>
-    
-    <script type="module" src="src/scripts/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/image/site-icon.png">
+  <title>crypto online - wellcome</title>
+</head>
+
+<body class="bg-dark">
+  <!-- navbar -->
+  <nav class="bg-dark-blue">
+    <div class="flex justify-between items-center py-2 container mx-auto max-w-7xl">
+      <!-- logo -->
+      <img src="assets/image/logo.png" alt="logo pic" class="bg-dark p-2 rounded-lg">
+      <!-- company name -->
+      <p class="text-lite bg-dark px-6 py-5 rounded-lg"><b>C</b>rypto<b>T</b>racker</p>
+    </div>
+  </nav>
+  <!-- crypto infornations -->
+  <section class="container mx-auto max-w-7xl">
+    <!-- labels -->
+    <div class="bg-lite-blue my-4 rounded-lg flex justify-items-stretch w-full">
+      <div class="border-r border-l-dark-blue text-center py-2 px-3 text-lg w-1/5">Introduction</div>
+      <div class="border-r border-l-dark-blue text-center py-2 px-3 text-lg w-1/5">Price</div>
+      <div class="border-r border-l-dark-blue text-center py-2 px-3 text-lg w-1/5">Price changes in 24H</div>
+      <div class="border-r border-l-dark-blue text-center py-2 px-3 text-lg w-1/5">Low Price   <span
+          class="text-dark-blue">|</span>   High price</div>
+      <div class="text-center py-2 px-3 text-lg w-1/5">Latest update</div>
+    </div>
+    <!-- contents -->
+    <div id="ContentsBox"
+      class="mt-2 h-[70vh]  bg-lite-blue my-4 overflow-y-scroll scrollbar-thin scrollbar-thumb-dark scrollbar-track-dark-blue">
+
+    </div>
+  </section>
+  <script type="module" src="src/scripts/main.js"></script>
+</body>
+
 </html>

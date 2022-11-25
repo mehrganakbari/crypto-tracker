@@ -1,10 +1,10 @@
 import "../common/index.css"
 
-const URL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=250&page=1";
+const URL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=249&page=1";
 
 const cryptoBox = document.querySelector("#ContentsBox");
 
-const addCrypto = () => {
+const addCrypto = (crypto) => {
   cryptoBox.innerHTML += `
   <div class="bg-lite-blue flex justify-items-stretch w-full">
   <div
@@ -15,7 +15,7 @@ const addCrypto = () => {
     </div>
     <div class="text-sm">${crypto.name}</div>
   </div>
-  <div class="border-r border-b border-l-dark-blue text-center py-2 px-3 text-lg w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5">${crypto.current_price}</div>
+  <div class="border-r border-b border-l-dark-blue text-center py-2 px-3 text-lg w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5">${crypto.current_price}$</div>
   <div class="border-r border-b border-l-dark-blue text-center py-2 px-3 text-lg hidden sm:block sm:w-1/3 lg:w-1/4 xl:w-1/5">${crypto.price_change_24h}</div>
   <div class="border-r border-b border-l-dark-blue text-center py-2 px-3 text-lg  hidden xl:block xl:w-1/5">${crypto.low_24h} <span
       class="text-dark-blue">|</span>  ${crypto.high_24h}</div>
@@ -29,6 +29,6 @@ fetch(URL)
   .then((data) => {
     console.log(data);
     data.map((crypto) => {
-      addCrypto(crypto.image, crypto.symbol, crypto.name, crypto.current_price, crypto.price_change_24h, crypto.high_24h, crypto.low_24h, crypto.last_updated);
+      addCrypto(crypto);
     });
   });
